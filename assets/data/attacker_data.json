@@ -1,0 +1,43 @@
+{
+  "actions": [
+    {
+      "name": "idle",
+      "duration": 79,
+      "timeline": [
+        { "sequence": "idle", "index": 0, "start": 0, "duration": 8 },
+        { "sequence": "idle", "index": 1, "start": 9, "duration": 8 },
+        { "sequence": "idle", "index": 2, "start": 17, "duration": 8 },
+        { "sequence": "idle", "index": 3, "start": 25, "duration": 8 },
+        { "sequence": "idle", "index": 4, "start": 33, "duration": 8 },
+        { "sequence": "idle", "index": 5, "start": 41, "duration": 8 },
+        { "sequence": "idle", "index": 6, "start": 49, "duration": 8 },
+        { "sequence": "idle", "index": 7, "start": 57, "duration": 8 },
+        { "sequence": "idle", "index": 8, "start": 65, "duration": 8 },
+        { "sequence": "idle", "index": 9, "start": 73, "duration": 8 }
+      ]
+    },
+    {
+      "name": "6A",
+      "duration": 42,
+      "timeline": [
+        { "sequence": "6A", "index": 17, "start": 0, "duration": 3 },
+        { "sequence": "6A", "index": 18, "start": 3, "duration": 3 },
+        { "sequence": "6A", "index": 19, "start": 6, "duration": 3 },
+        { "sequence": "6A", "index": 20, "start": 9, "duration": 3 },
+        { "sequence": "6A", "index": 21, "start": 12, "duration": 3 },
+        { "sequence": "6A", "index": 22, "start": 15, "duration": 3 },
+        { "sequence": "6A", "index": 23, "start": 18, "duration": 3 },
+        { "sequence": "6A", "index": 24, "start": 20, "duration": 2 },
+        { "sequence": "6A", "index": 25, "start": 22, "duration": 2 },
+        { "sequence": "6A", "index": 26, "start": 24, "duration": 2 },
+        { "sequence": "6A", "index": 27, "start": 26, "duration": 2 },
+        { "sequence": "6A", "index": 28, "start": 28, "duration": 2 },
+        { "sequence": "6A", "index": 29, "start": 30, "duration": 2 },
+        { "sequence": "6A", "index": 30, "start": 32, "duration": 2 },
+        { "sequence": "6A", "index": 31, "start": 34, "duration": 2 },
+        { "sequence": "6A", "index": 32, "start": 36, "duration": 2 },
+        { "sequence": "6A", "index": 33, "start": 39, "duration": 2 }
+      ]
+    }
+  ]
+}

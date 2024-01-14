@@ -4,13 +4,13 @@ pub struct AttackerPlugin;
 
 impl Plugin for AttackerPlugin {
     fn build(&self, app: &mut App) {
-        app.add_systems(Startup, spawn_attacker)
+        app.add_systems(PreStartup, spawn_attacker)
             .add_systems(Update, animate_attacker);
     }
 }
 
 #[derive(Component)]
-struct Attacker;
+pub struct Attacker;
 
 #[derive(Component, Default)]
 struct AnimationIndices {
@@ -23,12 +23,12 @@ fn spawn_attacker(
     asset_server: Res<AssetServer>,
     mut texture_atlases: ResMut<Assets<TextureAtlas>>,
 ) {
-    let texture_handle = asset_server.load("animations/attacker_long.png");
+    let texture_handle = asset_server.load("animations/attacker.png");
     let texture_atlas =
-        TextureAtlas::from_grid(texture_handle, Vec2::new(720., 720.), 10, 8, None, None);
+        TextureAtlas::from_grid(texture_handle, Vec2::new(720., 720.), 17, 2, None, None);
     let texture_atlas_handle = texture_atlases.add(texture_atlas);
 
-    let animation_indices = AnimationIndices { first: 0, last: 79 };
+    let animation_indices = AnimationIndices { first: 17, last: 33 };
 
     commands.spawn((
         SpriteSheetBundle {

@@ -1,2 +1,6 @@
 * TODO
-  - (x) play overhead animation
+  - (x) play an animation
+  - (x) load action data from json file
+  - ( ) state machine
+  - ( ) animation system for both characters
+  - ( ) play animation at the correct speed by repeating sprite indices

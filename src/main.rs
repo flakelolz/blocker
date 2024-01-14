@@ -1,8 +1,10 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
-use bevy::prelude::*;
+use bevy::{prelude::*, window::EnabledButtons};
 use bevy_egui::{egui, EguiContexts, EguiPlugin};
 use bevy_embedded_assets::EmbeddedAssetPlugin;
+use bevy_inspector_egui::quick::WorldInspectorPlugin;
 
+mod animation_system;
 mod attacker;
 
 fn main() {
@@ -19,14 +21,14 @@ fn main() {
                 .set(ImagePlugin::default_nearest())
                 .set(WindowPlugin {
                     primary_window: Some(Window {
+                        resolution: (1600., 900.).into(),
                         title: "Reaction Test".into(),
-                        // resolution: (288., 512.).into(),
-                        // resizable: false,
-                        // enabled_buttons: EnabledButtons {
-                        //     minimize: false,
-                        //     maximize: false,
-                        //     close: true,
-                        // },
+                        resizable: false,
+                        enabled_buttons: EnabledButtons {
+                            minimize: false,
+                            maximize: false,
+                            close: true,
+                        },
                         ..default()
                     }),
                     ..default()
@@ -36,9 +38,11 @@ fn main() {
         .add_plugins(bevy_framepace::FramepacePlugin)
         .add_plugins(bevy_framepace::debug::DiagnosticsPlugin)
         .add_plugins(EguiPlugin)
+        .add_plugins(WorldInspectorPlugin::new())
         .add_systems(Update, bevy::window::close_on_esc)
         .add_systems(Startup, setup)
         .add_systems(Update, ui_example_system)
+        .add_plugins(character_data::CharacterDataPlugin)
         .add_plugins(attacker::AttackerPlugin)
         .run();
 }
