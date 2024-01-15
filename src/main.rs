@@ -6,6 +6,7 @@ use bevy_inspector_egui::quick::WorldInspectorPlugin;
 
 mod animation_system;
 mod attacker;
+mod character_data;
 
 fn main() {
     App::new()
@@ -44,6 +45,7 @@ fn main() {
         .add_systems(Update, ui_example_system)
         .add_plugins(character_data::CharacterDataPlugin)
         .add_plugins(attacker::AttackerPlugin)
+        .add_plugins(animation_system::AnimationSystemPlugin)
         .run();
 }
 
