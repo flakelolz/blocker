@@ -23,7 +23,7 @@ fn animation_system(
         &mut AnimationData,
         &crate::character_data::AttackerStates,
         &crate::character_data::ActionData,
-        &mut TextureAtlasSprite,
+        &mut TextureAtlas,
     )>,
 ) {
     for (mut animation, state, data, mut sprite) in &mut query {

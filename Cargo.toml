@@ -5,16 +5,19 @@ edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+[target.x86_64-pc-windows-msvc.dependencies]
+blake3 = { version = "1.5", features=["pure"] }
+
 [dependencies]
-bevy_egui = "0.24.0"
-bevy_embedded_assets = "0.9.1"
-bevy_framepace = "0.14.1"
-bevy-inspector-egui = "0.22.1"
+bevy_egui = "0.25.0"
+bevy_embedded_assets = "0.10.0"
+bevy_framepace = "0.15.0"
+bevy-inspector-egui = "0.23.3"
 miniserde = "0.1.36"
 rand = "0.8.5"
 
 [dependencies.bevy]
-version = "0.12.1"
+version = "0.13.0"
 # Disable the default features if there are any that you do not want
 default-features = false
 features = [
@@ -48,7 +51,7 @@ features = [
   "vorbis", # Audio: OGG Vorbis
 
   # Platform-specific:
-  # "x11",                   # Linux: Support X11 windowing system
+  "x11",                   # Linux: Support X11 windowing system
   # "android_shared_stdcxx", # Android: use shared C++ library
   # "webgl2",                # Web: use WebGL2 instead of WebGPU
 
